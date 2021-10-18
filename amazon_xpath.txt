@@ -1,0 +1,55 @@
+email = bhupsamaiet@gmail.com
+pass = Lav%210811
+
+1st url = https://www.amazon.in/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.in%2F%3Fref_%3Dnav_custrec_signin&openid.identity=
+	  http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+2nd url = https://www.amazon.in/hfc/bill/electricity?ref_=apay_deskhome_Electricity
+
+**************** after login ******************
+
+1. Amazon Pay = driver.find_element_by_xpath('//a[text()="Amazon Pay"]').click()
+
+*************** 2nd Page ******************
+
+2. Electercity = driver.find_element_by_xpath('//span[text()="Electricity"]').click() 
+
+*************** 3rd Page ******************
+
+3. Select state = //span[text()='Select State']
+
+4. state = //a[text()='Rajasthan'] 
+
+5. Select board = //span[text()='Select Electricity Board to proceed']
+
+6. state = //a[text()='Jaipur Vidyut Vitran Nigam (JVVNL)']
+
+7. K Number input = //input[@placeholder='Please enter your K Number']
+
+8. submit button = //span[text()='Fetch Bill'] 
+
+9. continue bill = //span[contains(text(), "Continue to Pay")]
+
+
+#############################
+
+email after five bill payment = //span[text()='Please pay with Amazon Pay UPI  to complete this transaction. Amazon Pay UPI is the only mode of 
+				payment supported after your first 5 bill payments in a month on this category.'] 
+
+Note:- change continoue button type = document.querySelector("#paymentBtnId-announce").setAttribute("type", "submit"); (for bypassing single id)
+
+
+#############################
+
+*************** 4th Page ******************
+
+10. paybill = //span[text()='Place Order and Pay']
+
+last url = https://www.amazon.in/gp/buy/thankyou/handlers/display.html?purchaseId=404-0053738-9249956&ref_=chk_typ_browserRefresh&isRefresh=1
+
+BBPS Reference Number: = //*[contains(text(), "BBPS Reference Number")]
+Operator Reference Number = //*[contains(text(), "Operator Reference Number")]
+
+
+
+
+
