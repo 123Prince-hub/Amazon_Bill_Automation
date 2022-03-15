@@ -1,3 +1,4 @@
+# all required modules
 import os
 import requests
 import pytesseract
