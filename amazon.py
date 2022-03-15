@@ -1,10 +1,8 @@
 import os
-import requests
 import pytesseract
 import xlwings as xw
 from time import sleep
 from selenium import webdriver
-from getmac import get_mac_address as gma
 from selenium.webdriver.common import alert
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
